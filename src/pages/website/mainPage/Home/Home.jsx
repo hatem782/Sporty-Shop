@@ -1,5 +1,4 @@
 import React from "react";
-import TopBar from "./Sections/TopBar/TopBar";
 import { useStyles } from "./HomeStyles";
 import Carossel from "./Sections/Carossel/Carossel";
 import PopularCategs from "./Sections/PopularCategs/Popular";
@@ -13,7 +12,6 @@ function Home() {
   const css = useStyles();
   return (
     <div className={css.main}>
-      <TopBar />
       <Carossel />
       <PopularCategs />
       <OurServices />

@@ -5,6 +5,7 @@ export const useStyles = makeStyles((theme) => ({
     width: "100%",
     height: "100vh",
     backgroundSize: "cover",
+    backgroundAttachment: "fixed",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "50% 50%",
     padding: "50px 30px",

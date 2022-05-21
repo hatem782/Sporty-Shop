@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import img from "../../Assets/images/Dynamic/equipment/Dumbbell.png";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
 import StarIcon from "@mui/icons-material/Star";
 import { makeStyles } from "@mui/styles";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -58,8 +61,13 @@ const rates = (num) => {
 const ProductSport = ({ item }) => {
   const css = useStyles();
 
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
   return (
-    <div className={css.card + " product"}>
+    <div data-aos="zoom-in" className={css.card + " product"}>
       <img src={img} />
       <h3>Dumbbell</h3>
       <div className="rates">

@@ -2,13 +2,22 @@ import React, { useState } from "react";
 import { useStyles } from "./TopBarStyles";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
+import { useNavigate } from "react-router-dom";
 
 function TopBar() {
   const css = useStyles();
   const [selected, setSelected] = useState("Home");
+  const navig = useNavigate();
+
+  const goto = (page) => {
+    navig("/website/" + page);
+  };
+
   const handleRouteWebsite = (rt) => {
     setSelected(rt);
+    goto(rt);
   };
+
   return (
     <div>
       <div className={css.Nav1}>
@@ -50,6 +59,6 @@ function TopBar() {
   );
 }
 
-const links = ["Home", "Product", "Services", "Gallery", "Sponsores"];
+const links = ["Home", "Products", "Services", "Gallery", "Sponsores"];
 
 export default TopBar;

@@ -55,7 +55,7 @@ const SmallProductSprot = ({ item }) => {
   const css = useStyles();
 
   return (
-    <div className={css.card + " product"}>
+    <div data-aos="zoom-in" className={css.card + " product"}>
       <div className="img">
         <img src={img} />
       </div>

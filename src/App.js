@@ -67,7 +67,7 @@ function App() {
                 path="/login"
                 element={<Login /*setRemember={setRemember}*/ />}
               />
-              <Route path="/website" element={<Website />} />
+              <Route path="/website/*" element={<Website />} />
               <Route path="*" element={<Navigate to="/website" />} />
             </Routes>
           ) : null}

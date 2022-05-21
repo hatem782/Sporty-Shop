@@ -1,0 +1,27 @@
+Ajout Contact us is you can
+
+User :
+consulter produit X
+ajout panier
+filtrage
+achat
+request to join service (delevery / commerce)
+
+Admin : 
+consulter users 
+Crud Boutiques
+accept/reject products requests 
+consulter service requests 
+logout/login X
+
+Boutique:
+Crud Products + NB ACHATS
+ADD PROD => * LIST ATTEND * => * LIST PROD ACCEPTEE *  / NB ACHATS
+
+logout/login X
+
+
+
+Presentation : ......... dhakarni beha 
+
+
