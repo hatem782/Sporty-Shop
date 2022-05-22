@@ -26,20 +26,32 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const WhiteButton = ({ children }) => {
+export const WhiteButton = ({ children, onClick }) => {
   const css = useStyles();
 
-  return <button className={` ${css.button} ${css.white} `}>{children}</button>;
+  return (
+    <button onClick={onClick} className={` ${css.button} ${css.white} `}>
+      {children}
+    </button>
+  );
 };
 
-export const BlackButton = ({ children }) => {
+export const BlackButton = ({ children, onClick }) => {
   const css = useStyles();
 
-  return <button className={` ${css.button} ${css.black} `}>{children}</button>;
+  return (
+    <button onClick={onClick} className={` ${css.button} ${css.black} `}>
+      {children}
+    </button>
+  );
 };
 
-export const GreenButton = ({ children }) => {
+export const GreenButton = ({ children, onClick }) => {
   const css = useStyles();
 
-  return <button className={` ${css.button} ${css.green} `}>{children}</button>;
+  return (
+    <button onClick={onClick} className={` ${css.button} ${css.green} `}>
+      {children}
+    </button>
+  );
 };

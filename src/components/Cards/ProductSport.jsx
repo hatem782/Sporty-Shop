@@ -3,6 +3,7 @@ import img from "../../Assets/images/Dynamic/equipment/Dumbbell.png";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
 import StarIcon from "@mui/icons-material/Star";
 import { makeStyles } from "@mui/styles";
+import { useNavigate } from "react-router-dom";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -12,6 +13,7 @@ const useStyles = makeStyles((theme) => ({
     padding: "30px 10px",
     borderLeft: "solid 2px #f9f9f9",
     borderRight: "solid 2px #f9f9f9",
+    cursor: "pointer",
     "& img": {
       width: "80%",
       display: "block",
@@ -61,13 +63,19 @@ const rates = (num) => {
 const ProductSport = ({ item }) => {
   const css = useStyles();
 
+  const navig = useNavigate();
+
+  const goto = (id) => {
+    navig("/website/product/1");
+  };
+
   useEffect(() => {
     AOS.init();
     AOS.refresh();
   }, []);
 
   return (
-    <div data-aos="zoom-in" className={css.card + " product"}>
+    <div onClick={goto} data-aos="zoom-in" className={css.card + " product"}>
       <img src={img} />
       <h3>Dumbbell</h3>
       <div className="rates">

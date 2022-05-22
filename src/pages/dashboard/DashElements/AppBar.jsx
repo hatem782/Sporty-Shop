@@ -56,7 +56,7 @@ function AppBar(props) {
           noWrap
           sx={{ flexGrow: 1 }}
         >
-          Dashboard
+          Shopy Shop Dashboard
         </Typography>
         <IconButton color="inherit">
           <Badge badgeContent={4} color="secondary">

@@ -3,11 +3,13 @@ import img from "../../Assets/images/Dynamic/equipment/Dumbbell.png";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
 import StarIcon from "@mui/icons-material/Star";
 import { makeStyles } from "@mui/styles";
+import { useNavigate } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   card: {
     display: "flex",
     alignItems: "center",
+    cursor: "pointer",
     "& .img": {
       width: "80px",
       padding: "5px",
@@ -53,9 +55,14 @@ const rates = (num) => {
 
 const SmallProductSprot = ({ item }) => {
   const css = useStyles();
+  const navig = useNavigate();
+
+  const goto = (id) => {
+    navig("/website/product/1");
+  };
 
   return (
-    <div data-aos="zoom-in" className={css.card + " product"}>
+    <div onClick={goto} data-aos="zoom-in" className={css.card + " product"}>
       <div className="img">
         <img src={img} />
       </div>

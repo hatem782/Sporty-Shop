@@ -12,11 +12,11 @@ import {
 } from "recharts";
 
 // Generate Sales Data
-/*function createData(time, amount) {
+function createData(time, amount) {
   return { time, amount };
-}*/
+}
 
-/*const data = [
+const data = [
   createData("00:00", 0),
   createData("03:00", 300),
   createData("06:00", 600),
@@ -25,7 +25,7 @@ import {
   createData("15:00", 2000),
   createData("18:00", 2400),
   createData("21:00", 2400),
-];*/
+];
 
 export default function LinearChart(props) {
   const theme = useTheme();
@@ -33,7 +33,7 @@ export default function LinearChart(props) {
     color = theme.palette.primary.main,
     datakey,
     valuekey,
-    data = [],
+    //data = [],
   } = props;
 
   return (

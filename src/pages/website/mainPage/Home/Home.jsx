@@ -6,7 +6,6 @@ import OurServices from "./Sections/OurServices/OurServices";
 import BestProducts from "./Sections/BestProducts/BestProducts";
 import ExempleProd from "./Sections/ExempleProduct/ExempleProd";
 import SmallProductList from "./Sections/ProductsSmallPrev/SmallProductList";
-import Footer from "./Sections/Footer/Footer";
 
 function Home() {
   const css = useStyles();
@@ -18,7 +17,6 @@ function Home() {
       <BestProducts />
       <ExempleProd />
       <SmallProductList />
-      <Footer />
     </div>
   );
 }

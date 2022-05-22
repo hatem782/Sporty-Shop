@@ -13,6 +13,10 @@ function TopBar() {
     navig("/website/" + page);
   };
 
+  const gotoSignIn = (page) => {
+    navig("/login");
+  };
+
   const handleRouteWebsite = (rt) => {
     setSelected(rt);
     goto(rt);
@@ -26,7 +30,9 @@ function TopBar() {
           <div className="button br2 bl1">Be-With-US</div>
         </div>
         <div className="prt2">
-          <div className="button bl2 br1">Login Or Register</div>
+          <div className="button bl2 br1" onClick={gotoSignIn}>
+            Login Or Register
+          </div>
           <div className="button bl2 br1">
             <FavoriteIcon className="icon" />
           </div>

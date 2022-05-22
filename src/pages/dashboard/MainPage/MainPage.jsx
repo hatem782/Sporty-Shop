@@ -13,6 +13,12 @@ import CollectionsIcon from "@mui/icons-material/Collections";
 import EventIcon from "@mui/icons-material/Event";
 import ArticleIcon from "@mui/icons-material/Article";
 import AutoStoriesIcon from "@mui/icons-material/AutoStories";
+import HourglassTopIcon from "@mui/icons-material/HourglassTop";
+import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
+import FitnessCenterIcon from "@mui/icons-material/FitnessCenter";
+import StoreIcon from "@mui/icons-material/Store";
+import DeliveryDiningIcon from "@mui/icons-material/DeliveryDining";
+import AddBusinessIcon from "@mui/icons-material/AddBusiness";
 
 import { useCollectionData } from "react-firebase-hooks/firestore";
 import { eventsShow } from "../../../services/EventsServices";
@@ -80,68 +86,68 @@ const CardsNumbers = () => {
       <NumbDisplay
         color={colors.green}
         title={"Number Of All Visits"}
-        value={allVisits}
+        value={500}
         icon={<LanguageIcon />}
       />
       <NumbDisplay
         color={colors.red}
         title={"Nb Of Current Users"}
-        value={cvisits}
+        value={10}
         icon={<GroupIcon />}
       />
       <NumbDisplay
         color={colors.blue}
         title={"Number Of Contacts"}
-        value={contacts ? contacts.length : 0}
+        value={25}
         icon={<ContactMailIcon />}
       />
       <NumbDisplay
         color={colors.orange}
-        title={"Number Of Emails"}
-        value={emails ? emails.length : 0}
-        icon={<EmailIcon />}
+        title={"Pending Deliv Serv"}
+        value={30}
+        icon={<DeliveryDiningIcon />}
       />
 
       <NumbDisplay
         color={colors.purple}
-        title={"Number Of Gallerys"}
-        value={galls ? galls.length : 0}
-        icon={<CollectionsIcon />}
+        title={"Number of products"}
+        value={50}
+        icon={<FitnessCenterIcon />}
       />
       <NumbDisplay
         color={colors.deepBlue}
-        title={"Number Of Blogs"}
+        title={"Pending Markets"}
         value={50}
-        icon={<ArticleIcon />}
+        icon={<AddBusinessIcon />}
       />
       <NumbDisplay
         color={colors.pink}
-        title={"Number Of Events"}
-        value={events ? events.length : 0}
-        icon={<EventIcon />}
+        title={"Number Of Stotes"}
+        value={4}
+        icon={<StoreIcon />}
       />
       <NumbDisplay
         color={colors.wood}
-        title={"Number Of Memories"}
+        title={"Pending Products"}
         value={memos ? memos.length : 0}
-        icon={<AutoStoriesIcon />}
+        icon={<HourglassTopIcon />}
       />
       <ChartCont>
         <h3 className="chart-title">
           {/* <span className="primary">+21</span>  */}
           <LanguageIcon />
-          Evolution of visits over time
+          Number of visits over time
         </h3>
-        <LinearChart data={statVisits} datakey="date" valuekey="number" />
+        <LinearChart data={statVisits} datakey="time" valuekey="amount" />
       </ChartCont>
 
       <ChartCont>
         <h3 className="chart-title">
           {/* <span className="primary">+21</span>*/}
-          <ContactMailIcon />
-          Evolution of contacts over time
+          <MonetizationOnIcon />
+          Profit over time
         </h3>
-        <LinearChart data={statContatcs} datakey="date" valuekey="number" />
+        <LinearChart data={statContatcs} datakey="time" valuekey="amount" />
       </ChartCont>
     </>
   );

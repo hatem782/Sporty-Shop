@@ -5,9 +5,10 @@ import StarIcon from "@mui/icons-material/Star";
 import { makeStyles } from "@mui/styles";
 import { WhiteButton } from "../Buttons/WebsiteButtons";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import FavoriteIcon from "@mui/icons-material/Favorite";
+//import FavoriteIcon from "@mui/icons-material/Favorite";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
+import { useNavigate } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -138,6 +139,11 @@ const rates = (num) => {
 
 const GridCard = ({ item }) => {
   const css = useStyles();
+  const navig = useNavigate();
+
+  const goto = (id) => {
+    navig("/website/product/1");
+  };
 
   return (
     <div className={css.card + " product"}>
@@ -155,19 +161,19 @@ const GridCard = ({ item }) => {
         </div>
         <div className="mid">
           <div className="buttons">
-            <WhiteButton>
+            <WhiteButton onClick={goto}>
               <span className="center">
                 <ShoppingCartIcon className="icon" /> Buy
               </span>
             </WhiteButton>
             <WhiteButton>
               <span className="center">
-                <ContentCopyIcon className="icon" />
+                <FavoriteBorderIcon className="icon" />
               </span>
             </WhiteButton>
             <WhiteButton>
               <span className="center">
-                <FavoriteBorderIcon className="icon" />
+                <ContentCopyIcon className="icon" />
               </span>
             </WhiteButton>
           </div>
